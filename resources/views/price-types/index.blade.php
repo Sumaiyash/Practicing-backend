@@ -6,7 +6,7 @@
         <div class="col-md-8">
             <div class=" p-4 ms-5 text-center">
                 <a href="{{ route('home') }}" class="btn btn-info fw-bold fs-3  ms-3 text-white text-decoration-none">Back</a>
-                <a href="{{ route('priceTypes.create') }}" class="btn btn-primary fw-bold fs-3 ms-3 text-decoration-none ">New Price Type create</a>
+                <a href="{{ route('priceTypes.create') }}" class="btn btn-primary fw-bold fs-3 ms-3 text-decoration-none "> Create New Price Type </a>
             </div>
             <div class="row">
                 <table class="table ms-5 table table-success table-striped bg-white border border-warning p-5">
@@ -14,7 +14,7 @@
                         <tr>
                             <th>Price Type Name</th>
                             <th class="text-center no-sort">Actvie Status</th>
-                            <th  class=" text-center">Action</th>  
+                            <th  class=" text-end">Action</th>  
                         </tr>
                     </thead>
                     <tbody>
@@ -32,7 +32,7 @@
                                     @endif
                                 </form>
                             </td>
-                            <td class="text-center">
+                            <td class="text-end">
                                 <div class="btn-group">
                                     <a href="{{ route('priceTypes.show', $priceType->id) }}" 
                                         class="btn btn-primary me-1"><i class="fa fa-eye"></i></a>

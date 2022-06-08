@@ -12,11 +12,11 @@
                 <table class="table ms-5 table table-success table-striped bg-white border border-warning p-5">
                     <thead>
                         <tr>
-                            <th class="text-center" >ID</th>
-                            <th class="text-center">Category Name</th>
-                            <th >Name</th>
+                            <th>ID</th>
+                            <th>Category Name</th>
+                            <th>Name</th>
                             <th class="text-center">Active Status</th>
-                            <th class="text-center">Action</th>
+                            <th class="text-end">Action</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -38,7 +38,7 @@
 
                             </form>
                         </td>
-                        <td class="text-center">
+                        <td class="text-end">
                           <div class="btn-group">
                            <a class="btn btn-success" href="{{ route('products.show',$product->id) }}"><i class="fa fa-eye"></i></a>
                            <a class="btn btn-info"  href="{{ route('products.edit',$product->id) }}"><i class="fa fa-edit"></i></a>
