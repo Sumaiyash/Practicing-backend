@@ -31,7 +31,7 @@
                     </div>
                     <div class="mb-4 row">
                         <label for="category_id" class=" fw-bold col-md-4 col-form-label text-end">
-                            Category Id :
+                            Category Name :
                        </label>
                        <div class="col-md-6">
                         <select class="form-control" name="category_id" value="{{ old('category_id') }}" required autocomplete="category_id" autofocus >

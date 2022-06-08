@@ -72,28 +72,34 @@ class CategoryController extends Controller
    
     public function destroy(Category $category)
     {
-        
-        $products = Product::where('category_id',$category->id)->count();
-        if($products > 0){
-            return redirect()->route('categories.index')->with('status','category could not deleted');
-        //  return route('categories.index');
-       }
-       else{
-        
+        $category->products()->delete();
+
         $category->delete();
-        return redirect()->route('categories.index')->with('status','category updated successfully');
-        // return route('categories.index');
-       }
+           
+        return redirect()->route('categories.index')->with('status','Category deleted Successfully');
+           
+    return redirect()->route('category.index');
+    //     $products = Product::where('category_id',$category->id)->count();
+    //     if($products > 0){
+    //         return redirect()->route('categories.index')->with('status','category could not deleted');
+    //     //  return route('categories.index');
+    //    }
+    //    else{
+        
+    //     $category->delete();
+    //     return redirect()->route('categories.index')->with('status','category updated successfully');
+    //     // return route('categories.index');
+    //    }
 
 
 
         // return 'error';
       //delete the product
       $category->delete();
-
       //redirect the user with a success message
        return redirect()->route('categories.index')->with('success','Category deleted successfully');  
     }
+
     public function changeStatus(Category $category)
     {
         $category->is_active = !$category->is_active;

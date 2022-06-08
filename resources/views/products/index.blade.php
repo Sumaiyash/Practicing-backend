@@ -8,8 +8,8 @@
                 <a href="{{ route('home') }}" class="btn btn-info fw-bold fs-3  ms-3 text-decoration-none">Back</a>
                 <a href="{{ route('products.create')}}" class="btn btn-primary fw-bold fs-3 ms-3 text-decoration-none "> Add Product</a>
             </div>
-            <div class="div">
-                <table class="table ms-5 table table-success table-striped bg-white border border-warning p-5">
+            <div class="me-4">
+                <table class="table  table table-success table-striped bg-white border border-warning p-5">
                     <thead>
                         <tr>
                             <th>ID</th>

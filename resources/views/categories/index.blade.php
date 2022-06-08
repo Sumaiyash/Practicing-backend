@@ -10,8 +10,8 @@
         <a href="{{ route('categories.create')}}" class="btn btn-primary fw-bold fs-3 ms-3 text-decoration-none "> Add Product</a>
     </div>
 
-    <div class="row ms-5">
-      <table class="ms-5 table table-success table-striped bg-white border border-warning p-5">
+    <div class="row ms-5" >
+      <table  class=" table ms-5 table-success table-striped bg-white border border-warning p-5">
         <thead>
           <tr >
             <th class="ms-5">SL</th>
