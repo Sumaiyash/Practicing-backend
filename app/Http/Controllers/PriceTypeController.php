@@ -37,7 +37,7 @@ class PriceTypeController extends Controller
         //save to database
         $priceType->save();
 
-        return redirect()->route('price-types.index')->with('status', 'Price Type has been created successfully.');
+        return redirect()->route('priceTypes.index')->with('status', 'Price Type has been created successfully.');
     }
 
     
@@ -61,7 +61,7 @@ class PriceTypeController extends Controller
         //save to database
         $priceType->update();
 
-        return redirect()->route('price-types.index')->with('status', 'Price Type has been updated successfully.');
+        return redirect()->route('priceTypes.index')->with('status', 'Price Type has been updated successfully.');
     }
 
     
@@ -69,7 +69,7 @@ class PriceTypeController extends Controller
     {
         $priceType->delete();
 
-        return redirect()->route('price-type.index')->with('status','Price Type has been deleted successfully !');
+        return redirect()->route('priceTypes.index')->with('status','Price Type has been deleted successfully !');
     }
     
 
@@ -79,6 +79,6 @@ class PriceTypeController extends Controller
 
         $priceType->update();
 
-        return redirect()->route('price-types.index')->with('status','Price Type active status has been changed successfully !');
+        return redirect()->route('priceTypes.index')->with('status','Price Type active status has been changed successfully !');
     }
 }

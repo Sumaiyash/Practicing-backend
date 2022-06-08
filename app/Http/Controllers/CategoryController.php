@@ -2,7 +2,12 @@
 
 namespace App\Http\Controllers;
 use App\Models\Category;
+use App\Models\Product;
 use Illuminate\Http\Request;
+// use\App\Product;
+// use App\Http\Controllers\Product;
+// use App\Http\Controllers\CategoryController\Product;
+// class CategoryController extends Product
 
 class CategoryController extends Controller
 {
@@ -67,12 +72,27 @@ class CategoryController extends Controller
    
     public function destroy(Category $category)
     {
+        
+        $products = Product::where('category_id',$category->id)->count();
+        if($products > 0){
+            return redirect()->route('categories.index')->with('status','category could not deleted');
+        //  return route('categories.index');
+       }
+       else{
+        
+        $category->delete();
+        return redirect()->route('categories.index')->with('status','category updated successfully');
+        // return route('categories.index');
+       }
+
+
+
         // return 'error';
       //delete the product
       $category->delete();
 
       //redirect the user with a success message
-      return redirect()->route('categories.index')->with('success','Category deleted successfully');  
+       return redirect()->route('categories.index')->with('success','Category deleted successfully');  
     }
     public function changeStatus(Category $category)
     {
