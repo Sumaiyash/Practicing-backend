@@ -5,7 +5,6 @@ use  App\Http\Controllers\CategoryController;
 use  App\Http\Controllers\ProductController;
 use  App\Http\Controllers\PriceTypeController;
 
-
 Route::get('/', function () {
     return view('home');
 });
@@ -57,20 +56,3 @@ Route::controller(PriceTypeController::class)->prefix('price-types')->as('priceT
 
 
 
-//  Route::get('categories/index', [CategoryController::class, 'index'])->name('categories.index');
-//  Route::get('categories/create', [CategoryController::class, 'create'])->name('categories.create');
-//   Route::post('categories/store', [CategoryController::class, 'store'])->name('categories.store');
-//   Route::get('categories/show/{category}', [CategoryController::class, 'show'])->name('categories.show');
-//   Route::get('categories/edit/{category}', [CategoryController::class, 'edit'])->name('categories.edit');
-//   Route::patch('categories/update/{category}', [CategoryController::class, 'update'])->name('categories.update');
-//   Route::delete('categories/{category}', [CategoryController::class, 'destroy'])->name('categories.destroy');
-  
-
-
-// Route::get('products/index', [ProductController::class, 'index'])->name('products.index');
-// Route::get('products/create', [ProductController::class, 'create'])->name('products.create');
-// Route::post('products/store', [ProductController::class, 'store'])->name('products.store');
-// Route::get('products/show', [ProductController::class, 'show'])->name('products.show');
-// Route::get('products/edit', [ProductController::class, 'edit'])->name('products.edit');
-// Route::patch('products/update', [ProductController::class, 'update'])->name('products.update');
-// Route::delete('products/delete', [ProductController::class, 'index'])->name('products.index');

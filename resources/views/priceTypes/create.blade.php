@@ -9,13 +9,10 @@
         <form method="post" enctype="multipart/form-data" action="{{ route('price-types.store') }}">
             @csrf
             @method('POST') 
-
             <div class="card text-dark bg-warning">
-
                 <div class="card-header">
                     <h2 class="text-center">Create Price Type</h2>
                 </div>
-
                 <div class="card-body">
                     @if ($errors->any())
                             <div class="row">
@@ -34,9 +31,7 @@
                                 <input type="text" id="name" class="form-control" value="{{ old('name') }}" name="name"
                                     placeholder="Enter PriceType name" required autofocus>
                             </div>
-                        </div>
-
-                        
+                        </div>  
                 </div>
                 <div class="card-footer float-end">
                     <button type="submit" class="rounded" style=" color:rgb(245, 240, 240) ;background-color: rgb(23, 24, 20)" >Add Price Type</button>

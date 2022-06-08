@@ -22,16 +22,14 @@
                         <tr>
                             <td>{{$priceType->name}}</td>
                             <td class="text-center">
-                                <form action="{{ route('price-types.changeStatus', $priceType->id) }}" method="post">
-                                @csrf
-                                @method('GET')
-
+                               <form action="{{ route('price-types.changeStatus', $priceType->id) }}" method="post">
+                                 @csrf
+                                 @method('GET')
                                     @if ($priceType->is_active == 1)
                                         <button type="submit" class="btn btn-success">Active</button>
                                     @else
                                         <button type="submit" class="btn btn-danger">Inactive</button>
                                     @endif
-
                                 </form>
                             </td>
                             <td class="text-center">
@@ -47,16 +45,13 @@
                                                 <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure want to move this category to trashed ?')" title="Move to Trashed">
                                                     <i class="fa fa-trash"></i></button>
                                             </form> 
-
                                 </div> 
                             </td>
-                        </tr>
-                            
+                        </tr> 
                         @endforeach
                     </tbody>
                 </table>
             </div>
-            .
         </div>
     </div>
 </div>
