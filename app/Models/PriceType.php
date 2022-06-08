@@ -10,7 +10,6 @@ use App\Models\Price;
 class PriceType extends Model
 {
     use HasFactory;
-
     protected $fillable = [
         'name',
     ];

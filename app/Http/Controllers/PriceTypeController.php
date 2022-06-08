@@ -19,16 +19,13 @@ class PriceTypeController extends Controller
 
     }
 
-    
     public function create()
     {
         return view('price-types.create');
     }
 
-    
     public function store(Request $request)
     {
-        
         $priceType = new PriceType; 
 
         //insert data
