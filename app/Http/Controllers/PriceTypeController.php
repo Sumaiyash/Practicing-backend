@@ -22,7 +22,7 @@ class PriceTypeController extends Controller
     
     public function create()
     {
-        return view('price-types.create');
+        return view('price-types.create', compact('priceTypes'));
     }
 
     
