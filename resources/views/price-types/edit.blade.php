@@ -5,10 +5,10 @@
     <div class="col-md-12 w-75">
         <div class="row justify-content-center ">
             <div class="col-12 text-end mb-2">
-                <a href="{{ route('price-types.index') }}" class="btn" style=" color:rgb(28, 25, 25) ;background-color: rgb(245, 182, 11)">Back</a>
+                <a href="{{ route('priceTypes.index') }}" class="btn" style=" color:rgb(28, 25, 25) ;background-color: rgb(245, 182, 11)">Back</a>
             </div>
         </div>
-        <form method="post" action="{{ route('price-types.update', $priceType->id) }}" enctype="multipart/form-data">
+        <form method="post" action="{{ route('priceTypes.update', $priceType->id) }}" enctype="multipart/form-data">
             @csrf
             @method('PATCH')
             <div class="card card rounded-3 text-dark bg-warning fs-5 fw-semibold">

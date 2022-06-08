@@ -22,7 +22,7 @@ class PriceTypeController extends Controller
     
     public function create()
     {
-        return view('price-types.create', compact('priceTypes'));
+        return view('price-types.create');
     }
 
     
@@ -69,7 +69,7 @@ class PriceTypeController extends Controller
     {
         $priceType->delete();
 
-        return redirect()->route('price-types.index')->with('status','Price Type has been deleted successfully !');
+        return redirect()->route('price-type.index')->with('status','Price Type has been deleted successfully !');
     }
     
 

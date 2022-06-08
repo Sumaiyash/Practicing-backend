@@ -36,7 +36,7 @@ Route::controller(ProductController::class)->prefix('products')->as('products.')
   Route::get('/{product}/change-status', 'changeStatus')->name('changeStatus');
 });
 
-Route::controller(PriceTypeController::class)->prefix('price-types')->as('priceTypes.')->group(function () {
+Route::controller(PriceTypeController::class)->prefix('price-type')->as('priceTypes.')->group(function () {
 
   Route::get('/', 'index')->name('index');
   Route::post('/', 'store')->name('store');
@@ -46,7 +46,7 @@ Route::controller(PriceTypeController::class)->prefix('price-types')->as('priceT
   Route::delete('/{priceType}', 'destroy')->name('destroy');
   Route::get('/{priceType}/edit', 'edit')->name('edit');
 
-  Route::get('/{priceType}/change-status', 'changeStatus')->name('change-status');
+  Route::get('/{priceType}/change-status', 'changeStatus')->name('changeStatus');
 });
 
 

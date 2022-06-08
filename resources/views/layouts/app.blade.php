@@ -40,7 +40,7 @@
                            <div class="">
                             <a class=" text-black fs-3 fw-semibold ms-5 text-decoration-none" href="{{ route('categories.index')}}">Categories</a>
                             <a class=" text-black fs-3 fw-semibold ms-5 text-decoration-none" href="{{ route('products.index')}}">Products</a>
-                            <a class=" text-black fs-3 fw-semibold ms-5 text-decoration-none" href="{{ route('priceTypes.index')}}">PriceTypes</a>
+                            <a class=" text-black fs-3 fw-semibold ms-5 text-decoration-none" href="{{ route('priceTypes.index')}}">Pricetypes</a>
                            </div>
                         </div>
                     </ul>

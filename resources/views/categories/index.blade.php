@@ -5,12 +5,12 @@
   <div class="justify-content-center">
     <div class="col-md-10">
       <h1 style="color:orange" class="text-center">Categories Page</h1> 
-      <div class="p-3 text-end ">
+      <div class="p-3 text-center ">
         <a href="{{ route('home') }}" class="btn btn-info fw-bold text-white fs-3  ms-3 text-decoration-none">Back</a>
         <a href="{{ route('categories.create')}}" class="btn btn-primary fw-bold fs-3 ms-3 text-decoration-none "> Add Product</a>
     </div>
 
-    <div class="row p-5">
+    <div class="row ms-5">
       <table class="ms-5 table table-success table-striped bg-white border border-warning p-5">
         <thead>
           <tr >

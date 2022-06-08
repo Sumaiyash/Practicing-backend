@@ -6,7 +6,7 @@
         <div class="col-12 mb-2 text-end">
             <a href="{{ route('home') }}" class="btn" style=" color:rgb(28, 25, 25) ;background-color: rgb(245, 182, 11)">Back</a>
         </div>
-        <form method="post" enctype="multipart/form-data" action="{{ route('price-types.store') }}">
+        <form method="post" enctype="multipart/form-data" action="{{ route('priceTypes.store') }}">
             @csrf
             @method('POST') 
             <div class="card text-dark bg-warning">

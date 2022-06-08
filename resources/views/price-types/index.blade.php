@@ -5,8 +5,8 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class=" p-4 ms-5 text-center">
-                <a href="{{ route('home') }}" class="btn btn-info fw-bold fs-3  ms-3 text-decoration-none">Back</a>
-                <a href="{{ route('price-types.create')}}" class="btn btn-primary fw-bold fs-3 ms-3 text-decoration-none ">New Price Type create</a>
+                <a href="{{ route('home') }}" class="btn btn-info fw-bold fs-3  ms-3 text-white text-decoration-none">Back</a>
+                <a href="{{ route('priceTypes.create') }}" class="btn btn-primary fw-bold fs-3 ms-3 text-decoration-none ">New Price Type create</a>
             </div>
             <div class="row">
                 <table class="table ms-5 table table-success table-striped bg-white border border-warning p-5">
@@ -22,7 +22,7 @@
                         <tr>
                             <td>{{$priceType->name}}</td>
                             <td class="text-center">
-                               <form action="{{ route('price-types.changeStatus', $priceType->id) }}" method="post">
+                               <form action="{{ route('priceTypes.changeStatus', $priceType->id) }}" method="post">
                                  @csrf
                                  @method('GET')
                                     @if ($priceType->is_active == 1)
@@ -34,11 +34,11 @@
                             </td>
                             <td class="text-center">
                                 <div class="btn-group">
-                                    <a href="{{ route('price-types.show', $priceType->id) }}" 
+                                    <a href="{{ route('priceTypes.show', $priceType->id) }}" 
                                         class="btn btn-primary me-1"><i class="fa fa-eye"></i></a>
-                                        <a href="{{ route('price-types.edit', $priceType->id) }}"
+                                        <a href="{{ route('priceTypes.edit', $priceType->id) }}"
                                             class="btn btn-info me-1"><i class="fa fa-edit"></i></a>
-                                            <form action="{{ route('price-types.destroy', $priceType->id) }}" method="post">
+                                            <form action="{{ route('priceTypes.destroy', $priceType->id) }}" method="post">
                                                 @csrf
                                                 @method('DELETE')
 
